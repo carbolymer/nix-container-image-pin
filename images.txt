@@ -1,0 +1,4 @@
+docker.io/clusterzx/paperless-ai:latest
+docker.io/openspeedtest/latest:latest
+ghcr.io/home-assistant/home-assistant:stable
+ghcr.io/ignisda/ryot:v8
