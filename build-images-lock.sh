@@ -1,27 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-set -x
+set -euo pipefail
 
 declare -A nixmap
 
+# Map docker platforms to Nix system names
+declare -A platform_map=(
+  ["linux/amd64"]="x86_64-linux"
+  ["linux/arm64"]="aarch64-linux"
+  ["linux/arm/v7"]="armv7l-linux"
+  ["linux/arm/v6"]="armv6l-linux"
+  ["linux/386"]="i686-linux"
+)
+
 while read -r image; do
-  # Save manifest output to a variable to avoid subshells
-  manifest=$(podman manifest inspect "$image")
-  # Use jq to extract platform and digest, then read in the main shell
-  while IFS=' ' read -r platform digest; do
-    case "$platform" in
-      linux/amd64) nixsys="x86_64-linux" ;;
-      linux/arm64) nixsys="aarch64-linux" ;;
-      linux/arm/v7) nixsys="armv7l-linux" ;;
-      linux/arm/v6) nixsys="armv6l-linux" ;;
-      linux/386) nixsys="i686-linux" ;;
-      *) nixsys="$platform" ;;
-    esac
+  manifest_json=$(skopeo inspect --raw "docker://$image")
+  # Read all manifest entries into an array in the main shell
+  mapfile -t entries < <(echo "$manifest_json" | jq -c '.manifests[]')
+  for entry in "${entries[@]}"; do
+    os=$(echo "$entry" | jq -r '.platform.os')
+    arch=$(echo "$entry" | jq -r '.platform.architecture')
+    variant=$(echo "$entry" | jq -r '.platform.variant // empty')
+    digest=$(echo "$entry" | jq -r '.digest')
+    platform="$os/$arch"
+    if [[ "$arch" == "arm" && -n "$variant" ]]; then
+      platform="$platform/$variant"
+    fi
+    nixsys="${platform_map[$platform]:-$platform}"
+    attrname="$image"
     imgname="${image%%:*}"
-    nixmap["$nixsys|$image"]="\"$imgname@${digest}\""
-  done < <(echo "$manifest" | jq -r '.manifests[] | "\(.platform.os)/\(.platform.architecture) \(.digest)"')
+    nixmap["$nixsys|$attrname"]="\"$imgname@$digest\""
+  done
 done < images.txt
 
+# Write to images-lock.nix
 {
   echo "{"
   for sys in x86_64-linux aarch64-linux armv7l-linux armv6l-linux i686-linux; do

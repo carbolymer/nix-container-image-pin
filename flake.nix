@@ -10,10 +10,10 @@
   outputs = { nixpkgs, utils, ... }:
 
     let images = import ./images-lock.nix;
-    in
-    utils.lib.eachDefaultSystem (system:
+    in utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        deps = with pkgs; [ jq skopeo ];
 
         # wrap a shell script, adding programs to its PATH
         wrap = { paths ? [ ], vars ? { }, file ? null, script ? null
@@ -36,18 +36,16 @@
       in {
         apps = {
           build-images-lock = {
-          type = "app";
+            type = "app";
             program = (wrap {
               name = "build-images-lock";
-              paths = with pkgs; [ git curl jq podman ];
+              paths = deps;
               file = ./build-images-lock.sh;
             }).outPath;
           };
         };
 
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [ git curl jq podman ];
-        };
+        devShells.default = pkgs.mkShell { packages = deps; };
 
         containers.images = images."${system}" or null;
 
