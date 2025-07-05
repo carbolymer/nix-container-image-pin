@@ -1,11 +1,11 @@
 {
   description = "";
   inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
     utils.url = "github:numtide/flake-utils";
     utils.inputs.systems.follows = "systems";
   };
-
 
   outputs = { nixpkgs, utils, ... }:
 
