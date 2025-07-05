@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 declare -A nixmap
 
 while read -r image; do

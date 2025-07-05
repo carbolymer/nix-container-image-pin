@@ -33,6 +33,7 @@ jobs:
         run: |
           git add images-lock.nix
           if ! git diff --cached --quiet; then
+            git diff --cached
             git commit -m "chore: update images-lock.nix [automated]"
             git push
           fi
