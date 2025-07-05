@@ -47,7 +47,7 @@
 
         devShells.default = pkgs.mkShell { packages = deps; };
 
-        containers.images = images."${system}" or null;
+        containersImages = images."${system}" or null;
 
         formatter = pkgs.nixfmt-classic;
       });

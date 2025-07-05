@@ -4,7 +4,6 @@ set -euo pipefail
 
 declare -A nixmap
 
-# Map docker platforms to Nix system names
 declare -A platform_map=(
   ["linux/amd64"]="x86_64-linux"
   ["linux/arm64"]="aarch64-linux"
@@ -15,7 +14,6 @@ declare -A platform_map=(
 
 while read -r image; do
   manifest_json=$(skopeo inspect --raw "docker://$image")
-  # Read all manifest entries into an array in the main shell
   mapfile -t entries < <(echo "$manifest_json" | jq -c '.manifests[]')
   for entry in "${entries[@]}"; do
     os=$(echo "$entry" | jq -r '.platform.os')
@@ -33,7 +31,6 @@ while read -r image; do
   done
 done < images.txt
 
-# Write to images-lock.nix
 {
   echo "{"
   for sys in x86_64-linux aarch64-linux armv7l-linux armv6l-linux i686-linux; do
