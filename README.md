@@ -3,6 +3,7 @@
 Pin your container images!
 
 This repo resolves mutable container tags to hashes ([./images-lock.nix ](./images-lock.nix)), so that you can pin your containers and update them with all flake inputs.
+A [GitHub action](./.github/workflows/update-images-lock.yml) is updating the image hashes daily.
 
 ## Usage
 
@@ -38,4 +39,5 @@ This repo resolves mutable container tags to hashes ([./images-lock.nix ](./imag
     };
   }
   ```
-7. Build your configuration. Your container image will be pinned to your `containerImagesPin` input version.
+7. Build your configuration. 
+  Your container image will be pinned to your `containerImagesPin` input version.
