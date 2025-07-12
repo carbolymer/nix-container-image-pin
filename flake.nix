@@ -9,11 +9,11 @@
 
   outputs = { nixpkgs, utils, ... }:
 
-    let images = import ./images-lock.nix;
+    let images = builtins.fromJSON (builtins.readFile ./images-lock.json);
     in utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        deps = with pkgs; [ jq skopeo ];
+        deps = with pkgs; [ nushell skopeo ];
 
         # wrap a shell script, adding programs to its PATH
         wrap = { paths ? [ ], vars ? { }, file ? null, script ? null
@@ -40,7 +40,7 @@
             program = (wrap {
               name = "build-images-lock";
               paths = deps;
-              file = ./build-images-lock.sh;
+              file = ./build-images-lock.nu;
             }).outPath;
           };
         };
