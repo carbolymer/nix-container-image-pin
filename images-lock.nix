@@ -3,7 +3,7 @@
     "docker.io/openspeedtest/latest:latest" = "docker.io/openspeedtest/latest@sha256:16f9e946eda48660e4503c87e3d4f609b9cbdb23849544ac00aa88fa22f74023";
     "docker.io/itzcrazykns1337/perplexica:main" = "docker.io/itzcrazykns1337/perplexica@sha256:908d84347a24e3a6158bfb47a9809e8e03798b390c5cb5b940a120a158368159";
     "docker.io/clusterzx/paperless-ai:latest" = "docker.io/clusterzx/paperless-ai@sha256:ea2309b446ce478dd0bb0263de201229a218af7e217588f619ffaf34e3ebfbe3";
-    "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:b5d71b0789f96af14dfc1b3578234ce6888620917e87ef989f544ea26ea1093d";
+    "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:698935335dc572a06c83da8659a0c6cfddd742053a63db4caceddc1361159744";
     "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:a3f3364d7874835b06f141616fcdda8e696fc189f47272c52765714fc7d91459";
   };
   aarch64-linux = {
@@ -11,7 +11,7 @@
     "docker.io/clusterzx/paperless-ai:latest" = "docker.io/clusterzx/paperless-ai@sha256:eacdcc356a5bf958bad39dcb8426fc8b50ea338239e01a2ace2330f430fb83c8";
     "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:04855a797a0a5ee148101604b4b18ef8f5fc36c2dd04aff0149dc7f3ba58d605";
     "docker.io/openspeedtest/latest:latest" = "docker.io/openspeedtest/latest@sha256:1912b4d18a8094e234ed6bf3b38bc3ebc485ee48bc270483da77db1c56f4e600";
-    "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:cb9ab613b97ecf3735742dcd02bf40b7f2ee1c3b62b731f02f6017a32126e69a";
+    "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:933aba89979b8d664ec68b97ff4ffafe898e146c72410e7032486342b5781128";
   };
   armv7l-linux = {
     "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:60681b50b572a50f6693cac6c654f8a11f66da729ed120f2316bc9df5608b18b";
