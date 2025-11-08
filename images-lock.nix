@@ -4,24 +4,24 @@
     "docker.io/itzcrazykns1337/perplexica:main" = "docker.io/itzcrazykns1337/perplexica@sha256:58d92a223881b80ebde75bf73f210cb5e9deaeb35dc7948aac317f0e9143d1d0";
     "docker.io/clusterzx/paperless-ai:latest" = "docker.io/clusterzx/paperless-ai@sha256:19baad5ab2607d65087712fcb3ff74b6c5f7e840ea31061dace4d8ab1ef40a17";
     "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:698935335dc572a06c83da8659a0c6cfddd742053a63db4caceddc1361159744";
-    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:43ce8d90ebbd8eb45207e9cce3f8c8fe139f27ea87fbbf5c34a9183ee2b2cc9b";
+    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:b71548f7cf8e6471936c6c7cfb39e8de07b83f64a977f99bf14ac3564c273bf1";
   };
   aarch64-linux = {
     "docker.io/itzcrazykns1337/perplexica:main" = "docker.io/itzcrazykns1337/perplexica@sha256:18f5ba8ccf15686e98d635a27b29b3a50c33d292d7ca489bedfd3fd2d086b3eb";
     "docker.io/clusterzx/paperless-ai:latest" = "docker.io/clusterzx/paperless-ai@sha256:b494c85b0bad89fa612296c8adfed6114a3c5348f50ff0fdf5ffd2b47c22bbd5";
-    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:a84d8f545cab3bda5aacfe43dfbe5fa7a133034f731843d3f684526f21cd11c4";
+    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:52ca8ddbdcdd0bd49114319892c6f953945aaabe9782755d16fb4d2ec9d153fa";
     "docker.io/openspeedtest/latest:latest" = "docker.io/openspeedtest/latest@sha256:1912b4d18a8094e234ed6bf3b38bc3ebc485ee48bc270483da77db1c56f4e600";
     "ghcr.io/ignisda/ryot:v8" = "ghcr.io/ignisda/ryot@sha256:933aba89979b8d664ec68b97ff4ffafe898e146c72410e7032486342b5781128";
   };
   armv7l-linux = {
-    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:1e2c17dffbcc8834e003564299adf4f9c8cb1613d49a916cb011c6a10ec74a49";
+    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:fbc8f793c197bcb3587bb4982cd1818d9e0f84ce5329f06ced7dc966a6485999";
     "docker.io/openspeedtest/latest:latest" = "docker.io/openspeedtest/latest@sha256:f8b32fc550ab3bf080cb960938a0aad6dc84fe8b914cc7c2ae945cc614b68f35";
   };
   armv6l-linux = {
-    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:1a82fa444c589a4fbf164410f28a72064dd686a2817053c1327f589dea498370";
+    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:4e44fa26c50dab3a422f4498d11f15e2f8696c4e3dfe23dcae2f01771e6b2971";
   };
   i686-linux = {
     "docker.io/openspeedtest/latest:latest" = "docker.io/openspeedtest/latest@sha256:6ef09fe062bf9088c9781bd31b405d6103fee1b4e9293d7f5364ed20e4ed1eb2";
-    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:f97b0870fe7099e6c6d91289e8bba26165cbea848b0702df0a7ef0fc6b5d4719";
+    "ghcr.io/home-assistant/home-assistant:stable" = "ghcr.io/home-assistant/home-assistant@sha256:1077dcb617f692fbc4b5ef8cc5e7af2625a927380807d96fa7ca89766c347c51";
   };
 }
