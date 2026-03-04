@@ -13,7 +13,7 @@
     in utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        deps = with pkgs; [ jq skopeo ];
+        deps = with pkgs; [ jq skopeo nix ];
 
         # wrap a shell script, adding programs to its PATH
         wrap = { paths ? [ ], vars ? { }, file ? null, script ? null

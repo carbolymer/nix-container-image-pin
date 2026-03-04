@@ -20,14 +20,15 @@ A [GitHub action](./.github/workflows/update-images-lock.yml) is updating the im
     };
   ```
 
-6. Resolve your image name to an image hash, e.g.:
+6. Resolve your image name to a pinned ref, e.g.:
   ```nix
   {
     home-assistant =
     let img = containerImagesPin.containerImages."${pkgs.system}";
     in {
       image =
-        img."ghcr.io/home-assistant/home-assistant:stable";
+        img."ghcr.io/home-assistant/home-assistant:stable".ref;
+      # .sha256 is also available for tools that pre-fetch the image tarball
       volumes = [
         "home-assistant:/config"
         "/etc/localtime:/etc/localtime:ro"
