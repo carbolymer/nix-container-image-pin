@@ -24,6 +24,9 @@ jobs:
       - name: Run build-images-lock
         run: nix run '.#build-images-lock'
 
+      - name: Run checks
+        run: nix flake check
+
       - name: Set up Git user
         run: |
           git config --global user.name "github-actions[bot]"

@@ -20,7 +20,7 @@ tmpdir=$(mktemp -d)
 trap 'rm -rf "$tmpdir"' EXIT
 
 # Phase 1: resolve all image digests from manifests (no downloads)
-declare -a job_keys job_imgrefs job_archs job_oss job_variants
+declare -a job_keys job_imgrefs job_images job_archs job_oss job_variants
 job_count=0
 
 while read -r image; do
@@ -43,6 +43,7 @@ while read -r image; do
     nixmap["$key"]="$imgname@$digest"
     job_keys[$job_count]="$key"
     job_imgrefs[$job_count]="$imgname@$digest"
+    job_images[$job_count]="$image"
     job_archs[$job_count]="$arch"
     job_oss[$job_count]="$os"
     job_variants[$job_count]="$variant"
@@ -55,6 +56,7 @@ log "Downloading and hashing $job_count image(s) in parallel..."
 declare -a pids
 for ((i = 0; i < job_count; i++)); do
   imgref="${job_imgrefs[$i]}"
+  image="${job_images[$i]}"
   arch="${job_archs[$i]}"
   os="${job_oss[$i]}"
   variant="${job_variants[$i]}"
@@ -65,7 +67,7 @@ for ((i = 0; i < job_count; i++)); do
     skopeo_args=(--override-arch "$arch" --override-os "$os")
     [[ -n "$variant" ]] && skopeo_args+=(--override-variant "$variant")
     log "$label downloading..."
-    skopeo --insecure-policy copy "${skopeo_args[@]}" "docker://$imgref" "oci-archive://$tmptar" >/dev/null 2>&1
+    skopeo --insecure-policy copy "${skopeo_args[@]}" "docker://$imgref" "docker-archive://$tmptar:$image" >/dev/null 2>&1
     log "$label hashing..."
     nix hash file --sri "$tmptar"
     log "$label done"

@@ -49,6 +49,23 @@
 
         containersImages = images."${system}" or null;
 
+        checks = pkgs.lib.optionalAttrs (system == "x86_64-linux") (
+          let
+            imageRef = "ghcr.io/home-assistant/home-assistant:stable";
+            entry = images."x86_64-linux".${imageRef};
+            imageName = pkgs.lib.head (pkgs.lib.splitString ":" imageRef);
+            finalImageTag = pkgs.lib.last (pkgs.lib.splitString ":" imageRef);
+            imageDigest = pkgs.lib.last (pkgs.lib.splitString "@" entry.ref);
+          in {
+            ha-image = pkgs.dockerTools.pullImage {
+              inherit imageName imageDigest finalImageTag;
+              sha256 = entry.sha256;
+              os = "linux";
+              arch = "amd64";
+            };
+          }
+        );
+
         formatter = pkgs.nixfmt-classic;
       });
 }
