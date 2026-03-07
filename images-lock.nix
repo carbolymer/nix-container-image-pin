@@ -17,8 +17,8 @@
       sha256 = "sha256-WYiWis7JxD354GKNGF6txUDb7PVDKXTVy10PZ5A1OOk=";
     };
     "ghcr.io/home-assistant/home-assistant:stable" = {
-      ref = "ghcr.io/home-assistant/home-assistant@sha256:f4e63672e31a18006a135c79344fb57a2ac976b21719dbb6a9ade35db4d78645";
-      sha256 = "sha256-v2cGCtfYNqtqpw/RzZfxYVPhx7YBzaVaTQh5xwodfa0=";
+      ref = "ghcr.io/home-assistant/home-assistant@sha256:9dfead56f60fa9011719b4efca7a381fc6e89727bf6f58462d335fe7f04c033b";
+      sha256 = "sha256-jnpCWfuUDNSN3eOokluKDFnTAcvOL5108xG/64NNOlg=";
     };
   };
   aarch64-linux = {
@@ -31,8 +31,8 @@
       sha256 = "sha256-nRAiVLOwrPoUfgk0y1S/nCnSQP5rE3RofQVpVaN8jb0=";
     };
     "ghcr.io/home-assistant/home-assistant:stable" = {
-      ref = "ghcr.io/home-assistant/home-assistant@sha256:715b67bad508d213642ca9b2c8bc2c191e460d01957d42f4e88eb74217c68fc9";
-      sha256 = "sha256-KZ88hZwXWnUOIvWnrtuaY8bo5l1TOYEbGaGhDN1FNYQ=";
+      ref = "ghcr.io/home-assistant/home-assistant@sha256:3a491dcf68a0d17ec439a464f7a076386af11d8aec3e15d1c1c46625783f0340";
+      sha256 = "sha256-bSw7DkFEb83M5Ntg9thkBqdtqd/f64oeQMLz4mNd5RQ=";
     };
     "docker.io/openspeedtest/latest:latest" = {
       ref = "docker.io/openspeedtest/latest@sha256:1912b4d18a8094e234ed6bf3b38bc3ebc485ee48bc270483da77db1c56f4e600";
