@@ -12,6 +12,10 @@
       ref = "docker.io/clusterzx/paperless-ai@sha256:19baad5ab2607d65087712fcb3ff74b6c5f7e840ea31061dace4d8ab1ef40a17";
       sha256 = "sha256-5DHpf9TLkCZH9CdajKbIp/p3XmDRN0qdtwYSSQDj2v4=";
     };
+    "ghcr.io/toeverything/affine:stable" = {
+      ref = "ghcr.io/toeverything/affine@sha256:295420d621d0d36e701e07072e467579c17e6fe74095d954eeb6f6df3453213d";
+      sha256 = "sha256-cssj72F4n/vLwWgr76w+y5yHUJZMRC7OvnXxqDyyhSw=";
+    };
     "ghcr.io/ignisda/ryot:v8" = {
       ref = "ghcr.io/ignisda/ryot@sha256:698935335dc572a06c83da8659a0c6cfddd742053a63db4caceddc1361159744";
       sha256 = "sha256-WYiWis7JxD354GKNGF6txUDb7PVDKXTVy10PZ5A1OOk=";
@@ -22,6 +26,10 @@
     };
   };
   aarch64-linux = {
+    "ghcr.io/toeverything/affine:stable" = {
+      ref = "ghcr.io/toeverything/affine@sha256:0b9db94b3c1599cf72b9fff18ce01805f5d560d739cd05367400761d1d5a84ef";
+      sha256 = "sha256-qJuSjeDNdYvBaoUdjXdOwhVKZDcot0mbZNmB57zJyUQ=";
+    };
     "docker.io/itzcrazykns1337/perplexica:main" = {
       ref = "docker.io/itzcrazykns1337/perplexica@sha256:9e4f5dd02a4e069d43d4f7cb73f4ad73e6190f3eeb7e0ecc3277b86ec4b8c4b7";
       sha256 = "sha256-IaAg4n8flb8f3t70j1rG2bveYoET3MBu3Kna85QiFfA=";
@@ -44,6 +52,10 @@
     };
   };
   armv7l-linux = {
+    "ghcr.io/toeverything/affine:stable" = {
+      ref = "ghcr.io/toeverything/affine@sha256:90cd3260ca7793f2aca052e32b32e933a5e5c7737ef074910beea4a9fc812bb7";
+      sha256 = "sha256-tX8G5NNxxWRgdfFCPO3FEBseURBtq5TceWo+Y1dUd94=";
+    };
     "docker.io/openspeedtest/latest:latest" = {
       ref = "docker.io/openspeedtest/latest@sha256:f8b32fc550ab3bf080cb960938a0aad6dc84fe8b914cc7c2ae945cc614b68f35";
       sha256 = "sha256-4At06ONE+S8FhtJwDoZn1wfbTCDV90eYm91Fzj28Yww=";
