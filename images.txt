@@ -4,3 +4,4 @@ docker.io/openspeedtest/latest:latest
 ghcr.io/home-assistant/home-assistant:stable
 ghcr.io/ignisda/ryot:v8
 ghcr.io/toeverything/affine:stable
+docker.io/manifestdotbuild/manifest:latest
