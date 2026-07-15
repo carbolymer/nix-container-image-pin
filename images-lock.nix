@@ -17,8 +17,8 @@
       sha256 = "sha256-5DHpf9TLkCZH9CdajKbIp/p3XmDRN0qdtwYSSQDj2v4=";
     };
     "ghcr.io/toeverything/affine:stable" = {
-      ref = "ghcr.io/toeverything/affine@sha256:295420d621d0d36e701e07072e467579c17e6fe74095d954eeb6f6df3453213d";
-      sha256 = "sha256-cssj72F4n/vLwWgr76w+y5yHUJZMRC7OvnXxqDyyhSw=";
+      ref = "ghcr.io/toeverything/affine@sha256:c4c4435d00d8e77e2079d2257370d42e0e36bef21e6edffaee4b887a8e06302d";
+      sha256 = "sha256-FpLM3ESeVSVyh7TGpXWFbJ/lir0p0x5d1RKH3Uj3bX4=";
     };
     "ghcr.io/ignisda/ryot:v8" = {
       ref = "ghcr.io/ignisda/ryot@sha256:698935335dc572a06c83da8659a0c6cfddd742053a63db4caceddc1361159744";
@@ -31,8 +31,8 @@
   };
   aarch64-linux = {
     "ghcr.io/toeverything/affine:stable" = {
-      ref = "ghcr.io/toeverything/affine@sha256:0b9db94b3c1599cf72b9fff18ce01805f5d560d739cd05367400761d1d5a84ef";
-      sha256 = "sha256-qJuSjeDNdYvBaoUdjXdOwhVKZDcot0mbZNmB57zJyUQ=";
+      ref = "ghcr.io/toeverything/affine@sha256:70ce9fe0f69c3091392e80c518259cb6b6032ca2af1687e64456f9b981d1b415";
+      sha256 = "sha256-Jc0B6kvb9qjZSD7S6SEsNukj5ZxnvEa+G9cjO4i7w3A=";
     };
     "docker.io/itzcrazykns1337/perplexica:main" = {
       ref = "docker.io/itzcrazykns1337/perplexica@sha256:9e4f5dd02a4e069d43d4f7cb73f4ad73e6190f3eeb7e0ecc3277b86ec4b8c4b7";
@@ -61,8 +61,8 @@
   };
   armv7l-linux = {
     "ghcr.io/toeverything/affine:stable" = {
-      ref = "ghcr.io/toeverything/affine@sha256:90cd3260ca7793f2aca052e32b32e933a5e5c7737ef074910beea4a9fc812bb7";
-      sha256 = "sha256-tX8G5NNxxWRgdfFCPO3FEBseURBtq5TceWo+Y1dUd94=";
+      ref = "ghcr.io/toeverything/affine@sha256:70dfe27f52ba4cbab910ce026d0fbbcd7324421eca0b1348655f4cb09c507758";
+      sha256 = "sha256-AwV/yrhXYmwMHpK6B8M7CA/rFyRijz9BlDCEhexMa4w=";
     };
     "docker.io/openspeedtest/latest:latest" = {
       ref = "docker.io/openspeedtest/latest@sha256:f8b32fc550ab3bf080cb960938a0aad6dc84fe8b914cc7c2ae945cc614b68f35";
