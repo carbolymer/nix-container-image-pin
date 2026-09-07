@@ -1,8 +1,8 @@
 {
   x86_64-linux = {
     "docker.io/manifestdotbuild/manifest:latest" = {
-      ref = "docker.io/manifestdotbuild/manifest@sha256:e6f437519c1baacc745ab64fb2efe248c24119c05e165a2b3d73a08c115cca21";
-      sha256 = "sha256-qJLA5jSQQGXGEjE4/fNVrSzWKXMC24A8u3ZT1LQDcWQ=";
+      ref = "docker.io/manifestdotbuild/manifest@sha256:d6b4ab3869186424522bddf367c6682e808e98448feff1f96236b7614f26359e";
+      sha256 = "sha256-UkDbYNLOA5Gf6n9Gt+P1qgttOVvJatYnt0Nz8uP2zic=";
     };
     "docker.io/openspeedtest/latest:latest" = {
       ref = "docker.io/openspeedtest/latest@sha256:16f9e946eda48660e4503c87e3d4f609b9cbdb23849544ac00aa88fa22f74023";
@@ -63,8 +63,8 @@
       sha256 = "sha256-iLaMGjcyUNfDifeQnONY3hcKo/XoDl+GiM8cdSy9DIc=";
     };
     "docker.io/manifestdotbuild/manifest:latest" = {
-      ref = "docker.io/manifestdotbuild/manifest@sha256:ff4337b83823307010d1ca41db80d2d56a587ee3abf6ff4d726d89e38895f16d";
-      sha256 = "sha256-GtY4CbPlFJxdEHe7J/4Ldtumm0YjEPP04N0pg2AZIj0=";
+      ref = "docker.io/manifestdotbuild/manifest@sha256:52534722df9bef01d036d2b33a3cf4e917c38578440dc5180b27c5dccf3f573b";
+      sha256 = "sha256-Yl823XZhFS597o6b0qt6MGAQoOf96MmjXPj2w+h1Iiw=";
     };
   };
   armv7l-linux = {
