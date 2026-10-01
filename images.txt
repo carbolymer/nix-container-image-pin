@@ -6,3 +6,4 @@ ghcr.io/ignisda/ryot:v8
 ghcr.io/toeverything/affine:stable
 docker.io/manifestdotbuild/manifest:latest
 ghcr.io/danielbrendel/hortusfox-web:latest
+ghcr.io/thephaseless/byparr:latest
