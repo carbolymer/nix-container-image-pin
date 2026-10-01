@@ -1,8 +1,8 @@
 {
   x86_64-linux = {
     "docker.io/manifestdotbuild/manifest:latest" = {
-      ref = "docker.io/manifestdotbuild/manifest@sha256:e3775457df8cbc0c86b70bfaa47ec7c773ee22d34b76ca1ab7cc051b55dee675";
-      sha256 = "sha256-27W7lQLyRpaDq2Jz2sYQvM44+F36IAN1lh1e5tfC/Z8=";
+      ref = "docker.io/manifestdotbuild/manifest@sha256:1b40693d90c862abaabf415418362ddf351ee8e0a098445baf97e65f742af254";
+      sha256 = "sha256-T/Rd5dp5OiDqZnEvdA5/lLgVMt3b149Rbag5I4lPEOw=";
     };
     "docker.io/openspeedtest/latest:latest" = {
       ref = "docker.io/openspeedtest/latest@sha256:16f9e946eda48660e4503c87e3d4f609b9cbdb23849544ac00aa88fa22f74023";
@@ -23,6 +23,10 @@
     "ghcr.io/ignisda/ryot:v8" = {
       ref = "ghcr.io/ignisda/ryot@sha256:698935335dc572a06c83da8659a0c6cfddd742053a63db4caceddc1361159744";
       sha256 = "sha256-WYiWis7JxD354GKNGF6txUDb7PVDKXTVy10PZ5A1OOk=";
+    };
+    "ghcr.io/thephaseless/byparr:latest" = {
+      ref = "ghcr.io/thephaseless/byparr@sha256:51a629fa3dcde0cee1a780922e1a572c4a5be0b5a0cb825db73d4e63059275ff";
+      sha256 = "sha256-1BXMKL3Uv66u041MjYSBBMbwLePeDpcLXrJihJSX/bE=";
     };
     "ghcr.io/home-assistant/home-assistant:stable" = {
       ref = "ghcr.io/home-assistant/home-assistant@sha256:e47c978e1b801466e7f62f612fd552bc3a228e077b31a3f1c22c05cf63d754da";
@@ -62,9 +66,13 @@
       ref = "ghcr.io/ignisda/ryot@sha256:933aba89979b8d664ec68b97ff4ffafe898e146c72410e7032486342b5781128";
       sha256 = "sha256-iLaMGjcyUNfDifeQnONY3hcKo/XoDl+GiM8cdSy9DIc=";
     };
+    "ghcr.io/thephaseless/byparr:latest" = {
+      ref = "ghcr.io/thephaseless/byparr@sha256:deee7a375152218eadd4ee571ce2073e1a7cc2d320f3492947b1cd9d87c4f0d4";
+      sha256 = "sha256-7W/g7EMestqCjkq9fUFLBciZIv2yGMeMe38eCGLgP5w=";
+    };
     "docker.io/manifestdotbuild/manifest:latest" = {
-      ref = "docker.io/manifestdotbuild/manifest@sha256:4d25706430b87c9d105e70665c11957c54edc6c132ee818b6991229b73417188";
-      sha256 = "sha256-LnU7joCf5dSX3E6fW/DwmyJ+RATkTNycDSTqEPTOFng=";
+      ref = "docker.io/manifestdotbuild/manifest@sha256:1d4ae212dbdcfc2b93a7bc7b290471dd649162380950a845a75589ea05ff6b94";
+      sha256 = "sha256-mUQBcICvUW4rTMNHHtOeXwyfi6upu1kbDh26/aRp2j0=";
     };
   };
   armv7l-linux = {
